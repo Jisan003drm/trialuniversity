@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jamuna University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #00539C;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn {
+      background-color: #00539C;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #003f7d;
+    }
+
+    .page {
+      display: none;
+      padding: 40px 20px;
+      margin: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #home {
+      display: block;
+      text-align: center;
+      background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+      background-color: rgba(0, 83, 156, 0.6);
+      background-blend-mode: overlay;
+      color: white;
+      border-radius: 0;
+      padding: 80px 20px;
+    }
+
+    #home h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    #home p {
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+    }
+
+    form input, form textarea {
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      display: block;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      #home h1 {
+        font-size: 28px;
+      }
+
+      #home p {
+        font-size: 16px;
+      }
+
+      .page {
+        margin: 10px;
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Jamuna University</h2>
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showPage('home')">Home</a></li>
+      <li><a href="#" onclick="showPage('programs')">Programs</a></li>
+      <li><a href="#" onclick="showPage('admission')">Admission</a></li>
+      <li><a href="#" onclick="showPage('international')">International Students</a></li>
+      <li><a href="#" onclick="showPage('result')">Result</a></li>
+      <li><a href="#" onclick="showPage('about')">About</a></li>
+      <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+      <li><a href="#" onclick="showPage('student-login')">Student LogIn</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="page">
+  <h1>Welcome To Jamuna University</h1>
+  <p>Shaping The Future Of The Country</p>
+  <p>
+    Jamuna University, located in the heart of Jamalpur, is a leading private institution dedicated to academic excellence, innovation, and community development...
+  </p>
+  <a href="#" class="btn" onclick="openApplyModal()">APPLY NOW</a>
+</section>
+
+<section id="programs" class="page">
+  <h2>Our Academic Programs</h2>
+  <p>Jamuna University offers a range of undergraduate and postgraduate programs...</p>
+ 
+ <h3>Diploma Programs</h3>
+<ul>
+  <li><a href="courses/diploma-business.html" target="_blank">Diploma in Business Administration</a></li>
+  <li><a href="courses/diploma-cse.html" target="_blank">Diploma in Computer Science & Engineering</a></li>
+  <li><a href="courses/diploma-electrical.html" target="_blank">Diploma in Electrical Engineering</a></li>
+  <li><a href="courses/diploma-mechanical.html" target="_blank">Diploma in Mechanical Engineering</a></li>
+  <li><a href="courses/diploma-civil.html" target="_blank">Diploma in Civil Engineering</a></li>
+  <li><a href="courses/diploma-architecture.html" target="_blank">Diploma in Architecture & Interior Design</a></li>
+  <li><a href="courses/diploma-graphics.html" target="_blank">Diploma in Graphic Design</a></li>
+  <li><a href="courses/diploma-web.html" target="_blank">Diploma in Web Design & Development</a></li>
+  <li><a href="courses/diploma-digital-marketing.html" target="_blank">Diploma in Digital Marketing</a></li>
+  <li><a href="courses/diploma-hotel.html" target="_blank">Diploma in Hotel & Hospitality Management</a></li>
+  <li><a href="courses/diploma-tourism.html" target="_blank">Diploma in Tourism Management</a></li>
+  <li><a href="courses/diploma-english.html" target="_blank">Diploma in English Language</a></li>
+  <li><a href="courses/diploma-islamic.html" target="_blank">Diploma in Islamic Studies</a></li>
+  <li><a href="courses/diploma-animation.html" target="_blank">Diploma in Animation & Multimedia</a></li>
+  <li><a href="courses/diploma-nutrition.html" target="_blank">Diploma in Nutrition & Food Safety</a></li>
+  <li><a href="courses/diploma-healthcare.html" target="_blank">Diploma in Healthcare Management</a></li>
+  <li><a href="courses/diploma-photography.html" target="_blank">Diploma in Photography & Visual Arts</a></li>
+  <li><a href="courses/diploma-networking.html" target="_blank">Diploma in Networking & Cybersecurity</a></li>
+  <li><a href="courses/diploma-mobile-app.html" target="_blank">Diploma in Mobile App Development</a></li>
+</ul>
+
+ 
+ 
+ 
+ <h3>Undergraduate Programs</h3>
+<ul>
+  <li><a href="courses/bba.html" target="_blank">BBA (Bachelor of Business Administration)</a></li>
+  <li><a href="courses/cse.html" target="_blank">CSE (Computer Science and Engineering)</a></li>
+  <li><a href="courses/eee.html" target="_blank">EEE (Electrical and Electronic Engineering)</a></li>
+  <li><a href="courses/english.html" target="_blank">BA in English</a></li>
+  <li><a href="courses/llb.html" target="_blank">LLB (Bachelor of Laws)</a></li>
+  <li><a href="courses/sociology.html" target="_blank">BSS in Sociology</a></li>
+  <li><a href="courses/political-science.html" target="_blank">BSS in Political Science</a></li>
+  <li><a href="courses/economics.html" target="_blank">BSS in Economics</a></li>
+  <li><a href="courses/civil.html" target="_blank">BSc in Civil Engineering</a></li>
+  <li><a href="courses/mechanical.html" target="_blank">BSc in Mechanical Engineering</a></li>
+  <li><a href="courses/architecture.html" target="_blank">BSc in Architecture</a></li>
+  <li><a href="courses/environment.html" target="_blank">BSc in Environmental Science</a></li>
+  <li><a href="courses/biotech.html" target="_blank">BSc in Biotechnology</a></li>
+  <li><a href="courses/microbiology.html" target="_blank">BSc in Microbiology</a></li>
+  <li><a href="courses/public-health.html" target="_blank">BSc in Public Health</a></li>
+  <li><a href="courses/agriculture.html" target="_blank">BSc in Agriculture</a></li>
+  <li><a href="courses/food-nutrition.html" target="_blank">BSc in Food & Nutrition</a></li>
+  <li><a href="courses/finance.html" target="_blank">BBA in Finance</a></li>
+  <li><a href="courses/marketing.html" target="_blank">BBA in Marketing</a></li>
+  <li><a href="courses/hrm.html" target="_blank">BBA in Human Resource Management</a></li>
+  <li><a href="courses/media.html" target="_blank">BA in Media & Communication</a></li>
+  <li><a href="courses/education.html" target="_blank">BEd (Bachelor of Education)</a></li>
+  <li><a href="courses/international-relations.html" target="_blank">BSS in International Relations</a></li>
+  <li><a href="courses/fine-arts.html" target="_blank">BFA (Bachelor of Fine Arts)</a></li>
+  <li><a href="courses/tourism.html" target="_blank">BTHM (Bachelor of Tourism and Hospitality Management)</a></li>
+  <li><a href="courses/it.html" target="_blank">BSc in Information Technology</a></li>
+  <li><a href="courses/software.html" target="_blank">BSc in Software Engineering</a></li>
+  <li><a href="courses/islamic.html" target="_blank">BA in Islamic Studies</a></li>
+  <li><a href="courses/history.html" target="_blank">BA in History</a></li>
+  <li><a href="courses/philosophy.html" target="_blank">BA in Philosophy</a></li>
+</ul>
+
+
+
+
+
+
+
+ <h3>Postgraduate Programs</h3>
+<ul>
+  <li><a href="courses/mba.html" target="_blank">MBA (Master of Business Administration)</a></li>
+  <li><a href="courses/emba.html" target="_blank">EMBA (Executive MBA)</a></li>
+  <li><a href="courses/ms-cse.html" target="_blank">MSc in Computer Science & Engineering</a></li>
+  <li><a href="courses/ms-eee.html" target="_blank">MSc in Electrical & Electronic Engineering</a></li>
+  <li><a href="courses/ma-english.html" target="_blank">MA in English</a></li>
+  <li><a href="courses/llm.html" target="_blank">LLM (Master of Laws)</a></li>
+  <li><a href="courses/mss-sociology.html" target="_blank">MSS in Sociology</a></li>
+  <li><a href="courses/mss-political-science.html" target="_blank">MSS in Political Science</a></li>
+  <li><a href="courses/mss-economics.html" target="_blank">MSS in Economics</a></li>
+  <li><a href="courses/ms-civil.html" target="_blank">MSc in Civil Engineering</a></li>
+  <li><a href="courses/ms-mechanical.html" target="_blank">MSc in Mechanical Engineering</a></li>
+  <li><a href="courses/ms-architecture.html" target="_blank">MSc in Architecture</a></li>
+  <li><a href="courses/ms-environment.html" target="_blank">MSc in Environmental Science</a></li>
+  <li><a href="courses/ms-biotech.html" target="_blank">MSc in Biotechnology</a></li>
+  <li><a href="courses/ms-microbiology.html" target="_blank">MSc in Microbiology</a></li>
+  <li><a href="courses/ms-public-health.html" target="_blank">MPH (Master of Public Health)</a></li>
+  <li><a href="courses/ms-agriculture.html" target="_blank">MSc in Agriculture</a></li>
+  <li><a href="courses/ms-nutrition.html" target="_blank">MSc in Food & Nutrition</a></li>
+  <li><a href="courses/ma-media.html" target="_blank">MA in Media & Communication</a></li>
+  <li><a href="courses/med.html" target="_blank">MEd (Master of Education)</a></li>
+  <li><a href="courses/mir.html" target="_blank">MSS in International Relations</a></li>
+  <li><a href="courses/mfa.html" target="_blank">MFA (Master of Fine Arts)</a></li>
+  <li><a href="courses/ma-islamic.html" target="_blank">MA in Islamic Studies</a></li>
+  <li><a href="courses/ma-history.html" target="_blank">MA in History</a></li>
+  <li><a href="courses/ma-philosophy.html" target="_blank">MA in Philosophy</a></li>
+  <li><a href="courses/mit.html" target="_blank">MIT (Master of Information Technology)</a></li>
+  <li><a href="courses/mse.html" target="_blank">MSc in Software Engineering</a></li>
+</ul>
+
+
+
+
+
+</section>
+
+<section id="admission" class="page">
+  <h2>Admission Information</h2>
+  <p>We are currently accepting applications for the Fall 2025 semester.</p>
+  <h3>Undergraduate Admission Requirements:</h3>
+  <ul><li>Minimum GPA 2.5 in both SSC & HSC or equivalent</li><li>Completed online application form</li><li>Photocopy of academic transcripts</li></ul>
+  <h3>Postgraduate Admission Requirements:</h3>
+  <ul><li>Minimum CGPA 2.5 in undergraduate program</li><li>Professional experience (for MBA – preferred)</li></ul>
+  <p><strong>Application Deadline:</strong> September 30, 2025</p>
+</section>
+
+<section id="international" class="page">
+  <h2>Information for International Students</h2>
+  <p>Welcome to Jamuna University! Here's what you need to know if you're applying from outside Bangladesh.</p>
+  <h3>Visa Requirements:</h3>
+  <ul>
+    <li>Offer letter from Jamuna University</li>
+    <li>Valid passport</li>
+    <li>Proof of financial support</li>
+  </ul>
+  <h3>Tuition Fees (per semester):</h3>
+  <ul>
+    <li>Undergraduate: $1,200</li>
+    <li>Postgraduate: $1,500</li>
+  </ul>
+  <h3>Registration Process:</h3>
+  <ol>
+    <li>Complete the online application</li>
+    <li>Submit academic documents and passport scan</li>
+    <li>Receive acceptance letter</li>
+    <li>Apply for student visa</li>
+  </ol>
+  <h3>Need Help?</h3>
+  <p>Contact our International Affairs office: <br>Email: international@jamunauniversity.edu.bd</p>
+</section>
+
+<section id="result" class="page">
+  <h2>Academic Results</h2>
+  <p>Students can access their semester results by logging in through the Student Portal.</p>
+  <h3>Latest Published Results:</h3>
+  <ul><li>Spring 2025 – Undergraduate Programs</li><li>Fall 2024 – Postgraduate Programs</li></ul>
+</section>
+
+<section id="about" class="page">
+  <h2>About Us</h2>
+  <p>Jamuna University was established with the mission of empowering students through modern education, research, and innovation in the heart of Bangladesh.</p>
+</section>
+
+<section id="contact" class="page">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you! Please reach out to us using the form below:</p>
+  <form>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <input type="submit" value="Send Enquiry" class="btn">
+  </form>
+</section>
+
+<section id="student-login" class="page">
+  <h2>Student Login</h2>
+  <form>
+    <label for="student-id">Student ID:</label><br>
+    <input type="text" id="student-id" name="student-id" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="submit" value="Login" class="btn">
+  </form>
+  <p><a href="#">Forgot password?</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Jamuna University. All rights reserved.</p>
+</footer>
+
+<!-- Apply Modal -->
+<div id="applyModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeApplyModal()">&times;</span>
+    <h3>Apply as:</h3>
+    <button class="btn" onclick="redirectApply('domestic')">Domestic Student</button>
+    <button class="btn" onclick="redirectApply('international')">International Student</button>
+  </div>
+</div>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(section => {
+      section.style.display = 'none';
+    });
+
+    const target = document.getElementById(pageId);
+    if (target) {
+      target.style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+  }
+
+  function openApplyModal() {
+    document.getElementById('applyModal').style.display = 'block';
+  }
+
+  function closeApplyModal() {
+    document.getElementById('applyModal').style.display = 'none';
+  }
+
+  function redirectApply(type) {
+    closeApplyModal();
+    if (type === 'domestic') {
+      showPage('admission');
+    } else {
+      showPage('international');
+    }
+  }
+
+  window.onload = function () {
+    showPage('home');
+  };
+</script>
+
+</body>
+</html>
